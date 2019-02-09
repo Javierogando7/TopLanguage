@@ -15,6 +15,7 @@ import { VocabularyPage } from '../pages/vocabulary/vocabulary'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FavwordsPage,
     VocabularyPage,
     QuizPage,
+    VocabularydetailPage,
     TabsPage
   ],
   imports: [
@@ -40,6 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     FavwordsPage,
     VocabularyPage,
     QuizPage,
+    VocabularydetailPage,
     TabsPage
   ],
   providers: [

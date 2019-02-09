@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the VocabularyPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { VocabularydetailPage } from '../vocabularydetail/vocabularydetail';
 
 @IonicPage()
 @Component({
@@ -20,6 +14,10 @@ export class VocabularyPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VocabularyPage');
+  }
+
+  loadDetails() {
+    this.navCtrl.push(VocabularydetailPage);
   }
 
 }
