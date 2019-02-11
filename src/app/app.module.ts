@@ -7,15 +7,16 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { FavwordsPage } from '../pages/favwords/favwords'
-import { QuizPage } from '../pages/quiz/quiz'
-import { VocabularyPage } from '../pages/vocabulary/vocabulary'
-
-
-
+import { FavwordsPage } from '../pages/favwords/favwords';
+import { QuizPage } from '../pages/quiz/quiz';
+import { VocabularyPage } from '../pages/vocabulary/vocabulary';
+import { LoginPage } from '../pages/login/login';
+import { InicioPage } from '../pages/Inicio/Inicio';
+import { RegistroPage } from '../pages/Registro/Registro';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    InicioPage,
+    RegistroPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,10 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    InicioPage,
+    RegistroPage
   ],
   providers: [
     StatusBar,
