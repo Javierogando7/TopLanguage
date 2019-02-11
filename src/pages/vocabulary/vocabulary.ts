@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { VocabularydetailPage } from '../vocabularydetail/vocabularydetail';
 
 @IonicPage()
@@ -9,7 +9,7 @@ import { VocabularydetailPage } from '../vocabularydetail/vocabularydetail';
 })
 export class VocabularyPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
   }
 
   ionViewDidLoad() {
@@ -17,7 +17,7 @@ export class VocabularyPage {
   }
 
   loadDetails() {
-    this.navCtrl.push(VocabularydetailPage);
+    this.app.getRootNav().push(VocabularydetailPage);
   }
 
 }
