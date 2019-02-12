@@ -7,12 +7,13 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MainPage } from '../pages/main/main';
 import { FavwordsPage } from '../pages/favwords/favwords';
+import { AddWordPage } from '../pages/addword/addword';
 import { QuizPage } from '../pages/quiz/quiz';
 import { VocabularyPage } from '../pages/vocabulary/vocabulary';
-import { LoginPage } from '../pages/login/login';
-import { InicioPage } from '../pages/Inicio/Inicio';
-import { RegistroPage } from '../pages/Registro/Registro';
+import { SignInPage } from '../pages/signin/signin';
+import { RegistroPage } from '../pages/registro/registro';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
@@ -24,13 +25,14 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     AboutPage,
     ContactPage,
     HomePage,
+    MainPage,
     FavwordsPage,
+    AddWordPage,
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
     TabsPage,
-    LoginPage,
-    InicioPage,
+    SignInPage,
     RegistroPage
   ],
   imports: [
@@ -43,13 +45,14 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     AboutPage,
     ContactPage,
     HomePage,
+    MainPage,
     FavwordsPage,
+    AddWordPage,
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
     TabsPage,
-    LoginPage,
-    InicioPage,
+    SignInPage,
     RegistroPage
   ],
   providers: [

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MainPage } from '../main/main';
+
 /**
- * Generated class for the RegistroPage page.
+ * Generated class for the AddwordPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,18 +10,16 @@ import { MainPage } from '../main/main';
 
 @IonicPage()
 @Component({
-  selector: 'page-registro',
-  templateUrl: 'registro.html',
+  selector: 'page-addword',
+  templateUrl: 'addword.html',
 })
-export class RegistroPage {
+export class AddWordPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegistroPage');
+    console.log('ionViewDidLoad AddwordPage');
   }
-  GoLogin(){
-    this.navCtrl.push(MainPage);
-  }
+
 }

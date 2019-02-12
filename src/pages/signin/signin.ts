@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { InicioPage } from '../Inicio/Inicio';
-import { RegistroPage } from '../Registro/Registro'
-
-
+import { TabsPage } from '../tabs/tabs';
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the SignInPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,21 +10,18 @@ import { RegistroPage } from '../Registro/Registro'
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-signin',
+  templateUrl: 'signin.html',
 })
-export class LoginPage {
+export class SignInPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    console.log('ionViewDidLoad SignInPage');
   }
-  GoInicio(){
-    this.navCtrl.push(InicioPage)
-  }
-  GoRegistro(){
-    this.navCtrl.push(RegistroPage)
+  GoHome(){
+    this.navCtrl.push(TabsPage);
   }
 }

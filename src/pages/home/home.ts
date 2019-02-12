@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, App } from 'ionic-angular';
-import { LoginPage } from '../login/login'
+import { MainPage } from '../main/main'
 
 @Component({
   selector: 'page-home',
@@ -12,7 +12,7 @@ export class HomePage {
 
   }
   GoLogin(){
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(MainPage);
   }
   loadSetting(){
     //this.app.getRootNav().push(SettingPage);
