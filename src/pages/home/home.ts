@@ -11,14 +11,12 @@ export class HomePage {
   constructor(public navCtrl: NavController, public app: App) {
 
   }
-  GoLogin(){
-    this.navCtrl.push(MainPage);
-  }
+
   loadSetting(){
     //this.app.getRootNav().push(SettingPage);
   }
 
   loadSignOut(){
-    //this.app.getRootNav().setRoot(LoginPage);
+    this.app.getRootNav().setRoot(MainPage);
   }
 }

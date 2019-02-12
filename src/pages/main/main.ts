@@ -4,13 +4,6 @@ import { SignInPage } from '../signin/signin';
 import { RegistroPage } from '../registro/registro'
 
 
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-main',
