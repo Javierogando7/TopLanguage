@@ -19,10 +19,6 @@ export class HomePage {
   }
 
   loadSignOut(){
-<<<<<<< HEAD
-    this.app.getRootNav().setRoot(MainPage);
-=======
     this.app.getRootNav().setRoot(SignInPage);
->>>>>>> 8ac9cbbf7240aecc01d98f1beda32605dc9a0dcf
   }
 }
