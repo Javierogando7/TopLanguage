@@ -14,6 +14,8 @@ import { QuizPage } from '../pages/quiz/quiz';
 import { VocabularyPage } from '../pages/vocabulary/vocabulary';
 import { SignInPage } from '../pages/signin/signin';
 import { RegistroPage } from '../pages/registro/registro';
+import { SettingPage } from '../pages/setting/setting';
+import { SearchPage } from '../pages/search/search';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
@@ -25,6 +27,8 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     AboutPage,
     ContactPage,
     HomePage,
+    SettingPage,
+    SearchPage,
     MainPage,
     FavwordsPage,
     AddWordPage,
@@ -45,7 +49,9 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     AboutPage,
     ContactPage,
     HomePage,
+    SettingPage,
     MainPage,
+    SearchPage,
     FavwordsPage,
     AddWordPage,
     VocabularyPage,

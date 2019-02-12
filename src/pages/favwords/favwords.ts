@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { AddWordPage } from '../addword/addword';
+import { SearchPage } from '../search/search';
 
-/**
- * Generated class for the FavwordsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -25,6 +21,10 @@ export class FavwordsPage {
 
   goAddWord() {
     this.app.getRootNav().push(AddWordPage);
+  }
+
+  goSearchPage() {
+    this.app.getRootNav().push(SearchPage);
   }
 
 }
