@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, App } from 'ionic-angular';
 import { MainPage } from '../main/main'
-import { SignInPage } from '../signin/signin';
 import { SettingPage } from '../setting/setting';
 
 @Component({
@@ -19,6 +18,6 @@ export class HomePage {
   }
 
   loadSignOut(){
-    this.app.getRootNav().setRoot(SignInPage);
+    this.app.getRootNav().setRoot(MainPage);
   }
 }
