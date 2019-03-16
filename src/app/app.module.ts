@@ -20,6 +20,8 @@ import { SearchPage } from '../pages/search/search';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
+import { VocabularyDetailSportPage} from '../pages/vocabulary-detail-sport/vocabulary-detail-sport';
+import {VocabularyDetailGreetingsPage} from '../pages/vocabulary-detail-greetings/vocabulary-detail-greetings';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
+    VocabularyDetailSportPage,
+    VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
     RegistroPage
@@ -58,6 +62,8 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
+    VocabularyDetailSportPage,
+    VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
     RegistroPage
