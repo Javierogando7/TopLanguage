@@ -18,23 +18,23 @@
 
     <ion-list>
       <ion-item>
-        <ion-input placeholder = 'Spanish word'></ion-input>
+        <ion-input placeholder = 'Spanish word' [(ngModel)]="spanishWord"></ion-input>
       </ion-item>
     </ion-list>
 
     <ion-list>
       <ion-item>
-        <ion-input placeholder = 'English word'></ion-input>
+        <ion-input placeholder = 'English word' [(ngModel)]="englishWord"></ion-input>
       </ion-item>
     </ion-list>
 
       <ion-list>
         <ion-item>
-          <ion-input placeholder = 'description'></ion-input>
+          <ion-input placeholder = 'description' [(ngModel)]="description"></ion-input>
         </ion-item>
       </ion-list>
 
-      <button ion-button default>
+      <button ion-button default (click)="addWord()">
         Save
       </button>
     

@@ -20,6 +20,7 @@ import { SearchPage } from '../pages/search/search';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
+import { DatabaseProvider } from '../providers/database/database';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
     StatusBar,
     SplashScreen,
     SQLite,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatabaseProvider
   ]
 })
 export class AppModule {}
