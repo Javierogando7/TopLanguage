@@ -17,7 +17,7 @@
 
 <ion-list>
   <ion-item *ngFor="let word of words">
-    <p>{{word.id}}: {{word.spanishWord}}</p>
+    <p>{{word.spanishWord}}</p>
     <h2>{{word.englishWord}}</h2>
     <p>{{word.description}}</p>
     <button ion-button (click)='deleteWord(word)' clear icon-only item-end>
