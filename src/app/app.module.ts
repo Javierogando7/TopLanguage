@@ -21,6 +21,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
 import { DatabaseProvider } from '../providers/database/database';
+import { VocabularyDetailSportPage} from '../pages/vocabulary-detail-sport/vocabulary-detail-sport';
+import {VocabularyDetailGreetingsPage} from '../pages/vocabulary-detail-greetings/vocabulary-detail-greetings';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { DatabaseProvider } from '../providers/database/database';
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
+    VocabularyDetailSportPage,
+    VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
     RegistroPage
@@ -59,6 +63,8 @@ import { DatabaseProvider } from '../providers/database/database';
     VocabularyPage,
     QuizPage,
     VocabularydetailPage,
+    VocabularyDetailSportPage,
+    VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
     RegistroPage
