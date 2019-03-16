@@ -14,10 +14,16 @@ export class DatabaseProvider {
     return database;
   }
 
+  deleteDatabase(){
+    this.sqlite.deleteDatabase({name: this.databaseName, location: 'default'})
+    .then()
+    .catch();
+  }
+
   createTable(){
     this.getDatabase(this.databaseName)
     .then((db: SQLiteObject) => {
-      db.executeSql('CREATE TABLE IF NOT EXISTS favorite ( id INT PRIMARY KEY, spanishWord VARCHAR(30), englishWord VARCHAR(30), description VARCHAR(30))', [])
+      db.executeSql('CREATE TABLE favorite ( id INTEGER PRIMARY KEY AUTOINCREMENT, spanishWord VARCHAR(30), englishWord VARCHAR(30), description VARCHAR(30))', [])
         .then()
         .catch((error) => {
         console.log(error);
@@ -49,10 +55,10 @@ export class DatabaseProvider {
     return table;
   }
 
-  insertWord( spanishWord: string, englishWord: string, description: string){
+  insertWord(id: number, spanishWord: string, englishWord: string, description: string){
     this.getDatabase(this.databaseName)
       .then((db: SQLiteObject) => {
-        db.executeSql('INSERT INTO favorite (spanishWord, englishWord, description) VALUES (?, ?, ?)', [ spanishWord, englishWord, description])
+        db.executeSql('INSERT INTO favorite (spanishWord, englishWord, description) VALUES (?, ?, ?)', [spanishWord, englishWord, description])
           .then()
           .catch();
       })
@@ -61,12 +67,17 @@ export class DatabaseProvider {
       });
   }
 
-  deleteWord(id: number){
+  deleteWord(id){
     this.getDatabase(this.databaseName)
       .then((db: SQLiteObject) => {
-        db.executeSql('DELETE FROM favorite WHERE id = ' + id.toString(), [])
+        try {
+          db.executeSql('DELETE FROM favorite WHERE id = 1', [])
           .then()
           .catch();
+        } catch (error) {
+          console.log(error);
+        }
+        
       })
       .catch((error) => {
         console.log(error);

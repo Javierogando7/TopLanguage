@@ -22,8 +22,13 @@ export class FavwordsPage {
     this.words = this.sql.getTable('favorite');
   }
 
-  deleteWord(word: any){
-    this.sql.deleteWord(word.id);
+  deleteWord(word){
+    try {
+      this.sql.deleteWord(word);
+    } catch (error) {
+      
+    }
+    
   }
 
   goAddWord() {

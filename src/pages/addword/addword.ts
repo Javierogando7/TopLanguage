@@ -21,7 +21,7 @@ export class AddWordPage {
   }
 
   addWord(){
-    this.sql.insertWord(this.spanishWord, this.englishWord, this.description);
+    this.sql.insertWord(1, this.spanishWord, this.englishWord, this.description);
     this.navCtrl.pop();
   }
 
