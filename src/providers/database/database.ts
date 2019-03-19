@@ -23,7 +23,7 @@ export class DatabaseProvider {
   createTable(){
     this.getDatabase(this.databaseName)
     .then((db: SQLiteObject) => {
-      db.executeSql('CREATE TABLE favorite ( id INTEGER PRIMARY KEY AUTOINCREMENT, spanishWord VARCHAR(30), englishWord VARCHAR(30), description VARCHAR(30))', [])
+      db.executeSql('CREATE TABLE IF NOT EXISTS favorite ( id INTEGER PRIMARY KEY AUTOINCREMENT, spanishWord VARCHAR(30), englishWord VARCHAR(30), description VARCHAR(30))', [])
         .then()
         .catch((error) => {
         console.log(error);

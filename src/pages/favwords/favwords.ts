@@ -22,8 +22,6 @@ export class FavwordsPage {
     this.words = this.sql.getTable('favorite');
   }
 
-
-
   deleteWord(word){
     try {
       this.sql.deleteWord(word.id);
@@ -35,7 +33,7 @@ export class FavwordsPage {
   }
 
   goAddWord() {
-    this.app.getRootNav().push(AddWordPage);
+    this.navCtrl.push(AddWordPage);
   }
 
   goSearchPage() {
