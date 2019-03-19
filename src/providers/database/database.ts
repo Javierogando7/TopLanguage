@@ -55,7 +55,7 @@ export class DatabaseProvider {
     return table;
   }
 
-  insertWord(id: number, spanishWord: string, englishWord: string, description: string){
+  insertWord(spanishWord: string, englishWord: string, description: string){
     this.getDatabase(this.databaseName)
       .then((db: SQLiteObject) => {
         db.executeSql('INSERT INTO favorite (spanishWord, englishWord, description) VALUES (?, ?, ?)', [spanishWord, englishWord, description])
@@ -71,7 +71,7 @@ export class DatabaseProvider {
     this.getDatabase(this.databaseName)
       .then((db: SQLiteObject) => {
         try {
-          db.executeSql('DELETE FROM favorite WHERE id = 1', [])
+          db.executeSql('DELETE FROM favorite WHERE id = ' + id, [])
           .then()
           .catch();
         } catch (error) {
