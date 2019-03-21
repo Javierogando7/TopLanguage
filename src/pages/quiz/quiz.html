@@ -8,7 +8,10 @@
 
 
 <ion-item>
-  <h1>Quiz: question 1 of 20</h1>
+  <p>
+      {{str}}
+  </p>
+  
 </ion-item>
 
 <ion-item>
@@ -17,22 +20,22 @@
 
 <ion-list>
     <ion-item text-center>
-        <button ion-button default>
-          Manzana
+        <button ion-button click(quizGeneral())>
+          {{wordForButton1}}
         </button>
-        <button ion-button default>
-          Pera
+        <button ion-button click(quizGeneral())>
+            {{wordForButton2}}
         </button>
     </ion-item>
 </ion-list>
 
 <ion-list>
     <ion-item text-center>
-        <button ion-button default>
-          Durazno
+        <button ion-button click(quizGeneral())>
+            {{wordForButton3}}
         </button>
-        <button ion-button default >
-          Sandia
+        <button ion-button click(quizGeneral())>
+            {{wordForButton4}}
         </button>
     </ion-item>
 </ion-list>
