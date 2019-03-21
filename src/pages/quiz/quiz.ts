@@ -18,12 +18,7 @@ export class QuizPage {
 
   count =  1;
   quizTitle = "Quiz: question ";
-  str:String
-  quizWordsArray = []
-  wordForButton1:string
-  wordForButton2:string
-  wordForButton3:string
-  wordForButton4:string
+  str = "";
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -43,8 +38,7 @@ export class QuizPage {
   }
 
   questionCount(){
-    this.str = this.quizTitle + this.count + " of 20"
-    this.countUpdate()
+    this.str = this.quizTitle + this.count + " of 20";
     return this.str;
   }
 
