@@ -29,11 +29,29 @@ StartPeach(){
   this.smartAudio.play('peach');
 }
 
-StartFruit(){
-  this.smartAudio.play('fruit');
+StartUva(){
+  this.smartAudio.play('Uva');
 }
 
+StartPina(){
+  this.smartAudio.play('Pina');
+}
 
+StartMango(){
+  this.smartAudio.play('Mango');
+}
+
+StartCereza(){
+  this.smartAudio.play('Cereza');
+}
+
+StartLimon(){
+  this.smartAudio.play('Limon');
+}
+
+StartFresa(){
+  this.smartAudio.play('Fresa');
+}
 
 
 
