@@ -23,7 +23,7 @@ export class SignInPage {
     console.log('ionViewDidLoad SignInPage');
   }
   GoHome(){
-    if(this.username === "admin"){
+    if(this.username === "admin" && this.password === "1111"){
       this.navCtrl.push(TabsPage);
     }
     
