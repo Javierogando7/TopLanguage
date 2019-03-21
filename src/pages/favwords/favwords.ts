@@ -17,14 +17,15 @@ export class FavwordsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, private sql: DatabaseProvider) {
   }
 
-  ionViewWillEnter() {
+  ionViewDidEnter() {
     this.sql.createTable();
     this.words = this.sql.getTable('favorite');
   }
 
   deleteWord(word){
     try {
-      this.sql.deleteWord(word);
+      this.sql.deleteWord(word.id);
+      this.words = this.sql.getTable('favorite');
     } catch (error) {
       
     }
@@ -32,7 +33,7 @@ export class FavwordsPage {
   }
 
   goAddWord() {
-    this.app.getRootNav().push(AddWordPage);
+    this.navCtrl.push(AddWordPage);
   }
 
   goSearchPage() {

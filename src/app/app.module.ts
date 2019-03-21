@@ -23,8 +23,8 @@ import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail
 import { DatabaseProvider } from '../providers/database/database';
 import { VocabularyDetailSportPage} from '../pages/vocabulary-detail-sport/vocabulary-detail-sport';
 import {VocabularyDetailGreetingsPage} from '../pages/vocabulary-detail-greetings/vocabulary-detail-greetings';
-
-
+import {NativeAudio} from '@ionic-native/native-audio';
+import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 @NgModule({
   declarations: [
     MyApp,
@@ -74,7 +74,9 @@ import {VocabularyDetailGreetingsPage} from '../pages/vocabulary-detail-greeting
     SplashScreen,
     SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatabaseProvider
+    NativeAudio,
+    DatabaseProvider,
+    SmartAudioProvider
   ]
 })
 export class AppModule {}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SmartAudioProvider } from '../../providers/smart-audio/smart-audio';
 
 /**
  * Generated class for the VocabularyDetailGreetingsPage page.
@@ -15,11 +16,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VocabularyDetailGreetingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public smartAudio : SmartAudioProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VocabularyDetailGreetingsPage');
   }
 
+  StartHello(){
+    this.smartAudio.play('hello');
+  }
+
+  StartHowAreYou(){
+    this.smartAudio.play('howareyou');
+  }
+
+  StartWhatsUp(){
+    this.smartAudio.play('whatsup');
+  }
 }
