@@ -19,6 +19,11 @@ export class QuizPage {
   count =  1;
   quizTitle = "Quiz: question ";
   str = "";
+  quizWordsArray = [];
+  wordForButton1 = "";
+  wordForButton2 = "";
+  wordForButton3 = "";
+  wordForButton4 = "";
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -39,6 +44,7 @@ export class QuizPage {
 
   questionCount(){
     this.str = this.quizTitle + this.count + " of 20";
+    this.countUpdate();
     return this.str;
   }
 
@@ -52,8 +58,8 @@ export class QuizPage {
   }
 
   quizGeneral(){
-    this.buttonUpdate
-    this.questionCount
+    this.buttonUpdate;
+    this.questionCount;
     
   }
 
@@ -64,9 +70,7 @@ export class QuizPage {
     this.wordForButton4 = this.quizWordsArray[Math.floor(Math.random() * this.quizWordsArray.length)];
   }
 
-  update(){
-    
-  
+
 
   
 
