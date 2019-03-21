@@ -34,4 +34,16 @@ export class VocabularyDetailGreetingsPage {
   StartWhatsUp(){
     this.smartAudio.play('whatsup');
   }
+
+  StartBuenosDias(){
+    this.smartAudio.play('BuenosDias');
+  }
+
+  StartBuenasTardes(){
+    this.smartAudio.play('BuenasTardes');
+  }
+
+  StartBuenasNoches(){
+    this.smartAudio.play('BuenasNoches');
+  }
 }

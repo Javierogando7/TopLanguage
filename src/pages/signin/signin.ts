@@ -14,7 +14,8 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'signin.html',
 })
 export class SignInPage {
-
+  username = "";
+  password = "";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -22,6 +23,9 @@ export class SignInPage {
     console.log('ionViewDidLoad SignInPage');
   }
   GoHome(){
-    this.navCtrl.push(TabsPage);
+    if(this.username === "admin" && this.password === "1111"){
+      this.navCtrl.push(TabsPage);
+    }
+    
   }
 }
