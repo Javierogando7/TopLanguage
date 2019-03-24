@@ -1,3 +1,4 @@
+import { DatabaseProvider } from './../providers/database/database';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,11 +14,12 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 export class MyApp {
   rootPage:any = MainPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, nativeAudio : NativeAudio, smartaudio : SmartAudioProvider) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, nativeAudio : NativeAudio, smartaudio : SmartAudioProvider, database: DatabaseProvider) {
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-     
+
+      //database.deleteDatabase();
+      database.createTable();
+
       smartaudio.preload('balls','assets/Audio/Balls.mp3');
       smartaudio.preload('stadium','assets/Audio/Stadium.mp3');    
       smartaudio.preload('basketballhoop','assets/Audio/BasketballHoop.mp3');
@@ -46,3 +48,4 @@ export class MyApp {
     });
   }
 }
+
