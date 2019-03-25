@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SignInPage } from '../signin/signin';
 import { RegistroPage } from '../registro/registro'
+import { DatabaseProvider } from '../../providers/database/database';
 
 
 @IonicPage()
@@ -11,16 +12,22 @@ import { RegistroPage } from '../registro/registro'
 })
 export class MainPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  usuarios = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public sql: DatabaseProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  ionViewDidEnter() {
+    //this.sql.createTable();
+    this.usuarios = this.sql.getUsers();
+    
   }
+  
   GoSignIn(){
     this.navCtrl.push(SignInPage)
   }
   GoRegistro(){
     this.navCtrl.push(RegistroPage)
   }
+
+  
 }
