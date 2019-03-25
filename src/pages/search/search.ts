@@ -19,7 +19,7 @@ export class SearchPage {
   }
 
   ionViewDidLoad() {
-    this.items = this.sql.getTable('favorite');
+    this.items = this.sql.getWords();
     this.setFilteredItems();
   }
 

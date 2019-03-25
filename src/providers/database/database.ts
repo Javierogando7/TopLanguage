@@ -3,10 +3,18 @@ import { SQLite, SQLiteObject } from "@ionic-native/sqlite";
 
 @Injectable()
 export class DatabaseProvider {
-
   databaseName = 'data.db';
-  constructor( private sqlite: SQLite) {
+  words = [];
+  countWords = 0;
+
+  constructor( public sqlite: SQLite) {
     
+  }
+
+  getWords(){
+    this.words = this.getTable('favorite');
+    //this.countWords = this.words.length.toString();
+    return this.words;
   }
 
   getDatabase(databaseName: string){
@@ -45,6 +53,8 @@ export class DatabaseProvider {
             let item = data.rows.item(i);
             table.push(item);
           }
+
+          this.countWords = table.length;
       }).catch((error) => {
         console.log(error);
       })

@@ -14,20 +14,21 @@ import { SearchPage } from '../search/search';
 export class FavwordsPage {
   words = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, private sql: DatabaseProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, public sql: DatabaseProvider) {
   }
 
   ionViewDidEnter() {
-    this.sql.createTable();
-    this.words = this.sql.getTable('favorite');
+    //this.sql.createTable();
+    this.words = this.sql.getWords();
+    
   }
 
   deleteWord(word){
     try {
       this.sql.deleteWord(word.id);
-      this.words = this.sql.getTable('favorite');
+      this.words = this.sql.getWords();
     } catch (error) {
-      
+      console.log(error);
     }
     
   }
