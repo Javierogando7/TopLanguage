@@ -6,29 +6,24 @@
 <ion-content padding center text-center>
 
   <ion-item text-center>
-      <img id = User src="/assets/imgs/user.jpeg"/>
+      <img id = User src="/assets/imgs/Top.png"/>
   </ion-item>
-
-  
-<button ion-button>Change profile pic</button>
-  
   
    
 <ion-list>
   <ion-item>
-    <ion-input placeholder = "Change name"></ion-input>
+    <ion-input placeholder = "Change name" [(ngModel)]="name"></ion-input>
   </ion-item>
   <ion-item>
-  <ion-input placeholder = "Change email"></ion-input>
+  <ion-input placeholder = "Change email" [(ngModel)]="email"></ion-input>
   </ion-item>
   <ion-item>
-  <ion-input placeholder = "New password" type = "Password"></ion-input>
+  <ion-input placeholder = "New password" type = "Password" [(ngModel)]="password"></ion-input>
   </ion-item>
   <ion-item>
       <ion-input placeholder = "Repeat new password" type = "Password"></ion-input>
   </ion-item>
   
 </ion-list>
-
 <button ion-button (click) = "goHomePage()" >Save</button>
 </ion-content>

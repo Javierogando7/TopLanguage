@@ -1,3 +1,4 @@
+
 import { DatabaseProvider } from './../providers/database/database';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -6,6 +7,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MainPage } from '../pages/main/main'
 import { NativeAudio } from '@ionic-native/native-audio';
 import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
+
+
 
 
 @Component({
@@ -19,6 +22,7 @@ export class MyApp {
 
       //database.deleteDatabase();
       database.createTable();
+      database.createTableregister();
 
       smartaudio.preload('balls','assets/Audio/Balls.mp3');
       smartaudio.preload('stadium','assets/Audio/Stadium.mp3');    
@@ -45,6 +49,8 @@ export class MyApp {
       smartaudio.preload('Fresa','assets/Audio/Fresa.mp3'); 
       statusBar.styleDefault();
       splashScreen.hide();
+    
+      
     });
   }
 }

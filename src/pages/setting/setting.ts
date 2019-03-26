@@ -1,13 +1,7 @@
+import { DatabaseProvider } from './../../providers/database/database';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
-
-/**
- * Generated class for the SettingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,8 +9,11 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'setting.html',
 })
 export class SettingPage {
+  name = '';
+  email = '';
+  password = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public app: App, public sql: DatabaseProvider) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +21,10 @@ export class SettingPage {
   }
 
   goHomePage() {
-    this.navCtrl.push(TabsPage);
+    if(this.name != '' && this.email != '' && this.password != ''){
+      this.sql.updateUser(this.name, this.email, this.password, this.sql.id);
+      this.navCtrl.push(TabsPage);
+    }
   }
 
 }
