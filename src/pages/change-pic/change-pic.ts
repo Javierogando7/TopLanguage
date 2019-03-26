@@ -17,7 +17,7 @@ import { Camera, CameraOriginal } from '@ionic-native/camera';
 })
 export class ChangePicPage {
   image: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public Camera:CameraOriginal) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private Camera:CameraOriginal) {
 
   }
 
