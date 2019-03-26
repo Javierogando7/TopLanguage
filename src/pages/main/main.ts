@@ -18,7 +18,7 @@ export class MainPage {
 
   ionViewDidEnter() {
     //this.sql.createTable();
-    this.usuarios = this.sql.getUsers();
+    //this.usuarios = this.sql.getUsers();
     
   }
   

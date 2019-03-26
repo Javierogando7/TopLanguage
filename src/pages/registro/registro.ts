@@ -16,9 +16,9 @@ import { DatabaseProvider } from '../../providers/database/database';
 })
 export class RegistroPage {
 
-  name : string;
-  email : string;
-  password : string;
+  name = '';
+  email = '';
+  password = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public sql: DatabaseProvider ) {
   }
@@ -26,15 +26,18 @@ export class RegistroPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
   }
+
   ionViewWillEnter() {
-    this.sql.createTableregister();}
+    this.sql.createTableregister();
+  }
   
   SaveUser(){
-  
-  this.sql.insertuser(this.name, this.email, this.password);
-  console.log ('Sus datos han sido guardados satisfactoriamente! ')
-  this.navCtrl.pop();
-  
+    if(this.name != '' && this.password != ''){
+      this.sql.insertuser(this.name, this.email, this.password);
+      console.log(this.name + this.password + this.email);
+      console.log ('Sus datos han sido guardados satisfactoriamente! ');
+      this.navCtrl.pop();
+    }
   }
   
 }

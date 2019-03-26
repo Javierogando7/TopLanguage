@@ -5,7 +5,6 @@ import { SQLite, SQLiteObject } from "@ionic-native/sqlite";
 export class DatabaseProvider {
   databaseName = 'data.db';
   words = [];
-  countWords = 0;
   usuarios = [];
 
   constructor( public sqlite: SQLite) {
@@ -14,13 +13,12 @@ export class DatabaseProvider {
 
   getWords(){
     this.words = this.getTable('favorite');
-    //this.countWords = this.words.length.toString();
     return this.words;
   }
 
- getUsers(){
- this.usuarios = this.getTable('users');
- return this.usuarios;
+  getUsers(){
+    this.usuarios = this.getTable('users');
+    return this.usuarios;
   }
 
   getDatabase(databaseName: string){
@@ -58,28 +56,26 @@ export class DatabaseProvider {
         .catch((error) => {
         console.log(error);
       })
-
-
     }).catch((error) => {
       console.log(error);
     });
   }
 
-  // Prueba de select para validacion (No funcional)
-
   getUser(user: string){
-let Users = [];
-this.getDatabase(this.databaseName).then((db:SQLiteObject) => {
-  db.executeSql('SELECT * FROM users where name = ' +  user, []).then ((data) => {
-    for (let i = 0; i< data.rows.length; i++) {
-      let item = data.rows.item(i);
-      Users.push (item);
-    }
-  }).catch((error => {
-    console.log(error);
-  }))
-})
- return Users;
+    let Users = [];
+    this.getDatabase(this.databaseName).then((db:SQLiteObject) => {
+      db.executeSql('SELECT * FROM users where name = ' +  user, [])
+      .then ((data) => {
+          for (let i = 0; i < data.rows.length; i++) {
+            let item = data.rows.item(i);
+            Users.push(item);
+          }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    });
+    return Users;
   }
 
 
@@ -109,8 +105,6 @@ this.getDatabase(this.databaseName).then((db:SQLiteObject) => {
             let item = data.rows.item(i);
             table.push(item);
           }
-
-          this.countWords = table.length;
       }).catch((error) => {
         console.log(error);
       })
@@ -132,9 +126,6 @@ this.getDatabase(this.databaseName).then((db:SQLiteObject) => {
         console.log(error);
       });
   }
-
- 
-
 
 
   insertWord(spanishWord: string, englishWord: string, description: string){
