@@ -1,3 +1,4 @@
+import { ChangePicPage } from './../change-pic/change-pic';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
@@ -25,6 +26,10 @@ export class SettingPage {
 
   goHomePage() {
     this.navCtrl.push(TabsPage);
+  }
+
+  loadChangePic(){
+    this.app.getRootNav().push(ChangePicPage);
   }
 
 }

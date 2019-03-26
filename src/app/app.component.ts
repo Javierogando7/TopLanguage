@@ -1,3 +1,4 @@
+import { Camera, CameraOriginal } from '@ionic-native/camera';
 import { DatabaseProvider } from './../providers/database/database';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -6,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MainPage } from '../pages/main/main'
 import { NativeAudio } from '@ionic-native/native-audio';
 import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
+
 
 
 @Component({
