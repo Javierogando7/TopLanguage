@@ -17,6 +17,7 @@ import { SignInPage } from '../pages/signin/signin';
 import { RegistroPage } from '../pages/registro/registro';
 import { SettingPage } from '../pages/setting/setting';
 import { SearchPage } from '../pages/search/search';
+import { QuizResultPage } from '../pages/quiz-result/quiz-result'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VocabularydetailPage } from '../pages/vocabularydetail/vocabularydetail';
@@ -43,7 +44,8 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
-    RegistroPage
+    RegistroPage,
+    QuizResultPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
-    RegistroPage
+    RegistroPage,
+    QuizResultPage
   ],
   providers: [
     StatusBar,

@@ -8,19 +8,19 @@
 
 
 <ion-item>
-      {{str}}
+  {{getQuestionCount()}}
 </ion-item>
 
 <ion-item>
-  <ion-img src='assets/imgs/peach.jpeg'></ion-img>
+  <ion-img src='imageUpdate()'></ion-img>
 </ion-item>
 
 <ion-list>
     <ion-item text-center>
-        <button ion-button click(quizGeneral())>
+        <button ion-button (click)="quizGeneral()">
           {{wordForButton1}}
         </button>
-        <button ion-button click(quizGeneral())>
+        <button ion-button (click)="quizGeneral()">
             {{wordForButton2}}
         </button>
     </ion-item>
@@ -28,10 +28,10 @@
 
 <ion-list>
     <ion-item text-center>
-        <button ion-button click(quizGeneral())>
+        <button ion-button (click)="quizGeneral()">
             {{wordForButton3}}
         </button>
-        <button ion-button click(quizGeneral())>
+        <button ion-button (click)="quizGeneral()">
             {{wordForButton4}}
         </button>
     </ion-item>
