@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MainPage } from '../main/main';
+import { DatabaseProvider } from '../../providers/database/database';
 /**
  * Generated class for the RegistroPage page.
  *
@@ -15,13 +16,28 @@ import { MainPage } from '../main/main';
 })
 export class RegistroPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  name = '';
+  email = '';
+  password = '';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public sql: DatabaseProvider ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
   }
-  GoLogin(){
-    this.navCtrl.push(MainPage);
+
+  ionViewWillEnter() {
+    this.sql.createTableregister();
   }
+  
+  SaveUser(){
+    if(this.name != '' && this.password != ''){
+      this.sql.insertuser(this.name, this.email, this.password);
+      console.log(this.name + this.password + this.email);
+      console.log ('Sus datos han sido guardados satisfactoriamente! ');
+      this.navCtrl.pop();
+    }
+  }
+  
 }

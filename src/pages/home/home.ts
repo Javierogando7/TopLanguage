@@ -10,7 +10,6 @@ import { DatabaseProvider } from '../../providers/database/database';
 })
 export class HomePage {
   words = [];
-  countWord = 0;
 
   constructor(public navCtrl: NavController, public app: App, public sql: DatabaseProvider) {
 

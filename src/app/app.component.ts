@@ -21,6 +21,7 @@ export class MyApp {
 
       //database.deleteDatabase();
       database.createTable();
+      database.createTableregister();
 
       smartaudio.preload('balls','assets/Audio/Balls.mp3');
       smartaudio.preload('stadium','assets/Audio/Stadium.mp3');    

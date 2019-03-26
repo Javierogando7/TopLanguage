@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Item, ItemSliding } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
-/**
- * Generated class for the SignInPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { DatabaseProvider } from '../../providers/database/database';
 
 @IonicPage()
 @Component({
@@ -14,18 +9,47 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'signin.html',
 })
 export class SignInPage {
-  username = "";
-  password = "";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  items = [];
+  
+  username = '';
+  password = '';
+  usuarios =  [];
+  passwords = [];
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public sql: DatabaseProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignInPage');
+  ionViewWillEnter() {
+
   }
-  GoHome(){
-    if(this.username === "admin" && this.password === "1111"){
-      this.navCtrl.push(TabsPage);
+
+  ionViewDidEnter() {
+    this.items = this.sql.getUsers();
+  }
+  
+
+  filterUsers(username){
+    return this.items.filter((item) => {
+        return item.name.toLowerCase().indexOf(username.toLowerCase()) > -1;
+    });     
+  }
+
+    setFilteredItems() {
+      this.usuarios = this.filterUsers(this.username);
     }
-    
-  }
+
+
+  GoHome(){
+    if(this.username != '' && this.password != ''){
+      this.setFilteredItems();
+      if (this.username === this.usuarios[0].name && this.password === this.usuarios[0].password){
+        this.navCtrl.push(TabsPage); 
+      }
+    }
+  } 
+
 }
+
+    
+    

@@ -18,7 +18,6 @@ export class FavwordsPage {
   }
 
   ionViewDidEnter() {
-    //this.sql.createTable();
     this.words = this.sql.getWords();
     
   }
