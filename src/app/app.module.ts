@@ -1,10 +1,9 @@
-import { ChangePicPage } from './../pages/change-pic/change-pic';
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { SQLite } from "@ionic-native/sqlite";
-import { Camera, CameraOriginal } from '@ionic-native/camera';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -47,7 +46,6 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     TabsPage,
     SignInPage,
     RegistroPage,
-    ChangePicPage,
     
   ],
   imports: [
@@ -72,8 +70,7 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
-    RegistroPage,
-    ChangePicPage,
+    RegistroPage
     
   ],
   providers: [
@@ -83,10 +80,7 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NativeAudio,
     DatabaseProvider,
-    SmartAudioProvider,
-    CameraOriginal
-    
-    
+    SmartAudioProvider
   ]
 })
 export class AppModule {}

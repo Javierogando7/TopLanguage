@@ -6,6 +6,7 @@ export class DatabaseProvider {
   databaseName = 'data.db';
   words = [];
   usuarios = [];
+  id: any;
 
   constructor( public sqlite: SQLite) {
     
@@ -78,6 +79,15 @@ export class DatabaseProvider {
     return Users;
   }
 
+  updateUser(id: string, name, email, password){
+    this.getDatabase(this.databaseName).then((db:SQLiteObject) => {
+      db.executeSql('UPDATE users SET name = ?, email = ?, password = ? where id = ?', [name, email, password, id])
+      .then ()
+      .catch((error) => {
+        console.log(error);
+      })
+    });
+  }
 
   getPassword(pass: string){
     let Passwords = [];

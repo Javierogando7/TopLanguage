@@ -44,6 +44,7 @@ export class SignInPage {
     if(this.username != '' && this.password != ''){
       this.setFilteredItems();
       if (this.username === this.usuarios[0].name && this.password === this.usuarios[0].password){
+        this.sql.id = this.usuarios[0].id;
         this.navCtrl.push(TabsPage); 
       }
     }
