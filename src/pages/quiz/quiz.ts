@@ -20,7 +20,7 @@ export class QuizPage {
   wordForButton2 = '';
   wordForButton3 = '';
   wordForButton4 = '';
-  imageForQuiz = '';
+  imageForQuiz = '/assets/imgs/apple.jpeg';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.imageUpdate();
