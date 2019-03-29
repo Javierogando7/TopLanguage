@@ -79,13 +79,23 @@ export class DatabaseProvider {
     return Users;
   }
 
-  updateUser(id: string, name, email, password){
-    this.getDatabase(this.databaseName).then((db:SQLiteObject) => {
-      db.executeSql('UPDATE users SET name = ?, email = ?, password = ? where id = ?', [name, email, password, id])
+  updateUser(id, name, email, password){
+    this.getDatabase(this.databaseName)
+    .then((db:SQLiteObject) => {
+      db.executeSql('UPDATE users SET name = ?, email = ?, password = ? WHERE id = ?', [name, email, password, id])
       .then ()
       .catch((error) => {
         console.log(error);
       })
+
+      db.executeSql('SELECT * FROM users WHERE id = ?', [id])
+      .then ((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+
     });
   }
 

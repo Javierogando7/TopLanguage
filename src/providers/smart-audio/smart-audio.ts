@@ -1,14 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { Platform } from 'ionic-angular';
 
-/*
-  Generated class for the SmartAudioProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class SmartAudioProvider {
 

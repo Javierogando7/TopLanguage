@@ -22,7 +22,7 @@ export class SettingPage {
 
   goHomePage() {
     if(this.name != '' && this.email != '' && this.password != ''){
-      this.sql.updateUser(this.name, this.email, this.password, this.sql.id);
+      this.sql.updateUser(this.sql.id,this.name, this.email, this.password);
       this.navCtrl.push(TabsPage);
     }
   }

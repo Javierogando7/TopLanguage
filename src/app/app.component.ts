@@ -17,7 +17,8 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 export class MyApp {
   rootPage:any = MainPage;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, nativeAudio : NativeAudio, smartaudio : SmartAudioProvider, database: DatabaseProvider) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, 
+              nativeAudio : NativeAudio, smartaudio : SmartAudioProvider, database: DatabaseProvider) {
     platform.ready().then(() => {
 
       //database.deleteDatabase();

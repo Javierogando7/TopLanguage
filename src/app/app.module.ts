@@ -47,11 +47,7 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     TabsPage,
     SignInPage,
     RegistroPage,
-<<<<<<< HEAD
     QuizResultPage
-=======
-    
->>>>>>> 92449d0eab4139385ba81b42db730559ebfa7be5
   ],
   imports: [
     BrowserModule,
@@ -75,13 +71,8 @@ import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
     VocabularyDetailGreetingsPage,
     TabsPage,
     SignInPage,
-<<<<<<< HEAD
     RegistroPage,
     QuizResultPage
-=======
-    RegistroPage
-    
->>>>>>> 92449d0eab4139385ba81b42db730559ebfa7be5
   ],
   providers: [
     StatusBar,
